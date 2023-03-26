@@ -1,7 +1,8 @@
 package Task_2_ChatBot
 
 import java.lang.System.`in`
-import java.util.Scanner
+import java.util.*
+
 
 fun task1() {
     val sc = Scanner(`in`)
@@ -49,19 +50,44 @@ fun task4(){
     println("Your century is: " + century(1950)) //Ќужно вводить вручную год, со сканнером не работает ;(
 }
 
-fun task5(){ //метод сортировки
+fun task5(){
     val arr: Array<Int> = arrayOf(94, 37, 20, 33, 14, 43, 100,
         61, 59, 46, 39, 28, 59,88, 35)
 
-    arr.sort()
+    arr.sort()//метод сортировки
 
     println("Minimal array value is: ${arr.first()}")
 }
 
 fun task6(){
+    val arr = intArrayOf(94, 37, 20, 33, 14, 43, 100,
+        61, 59, 46, 39, 28, 59,88, 35)
+
+    arr.sort()
+
+    for (i in arr.size - 2 until arr.size)
+        println("Maximal value in array is: " + arr[i])
+}
+
+fun task7(){
 
 }
 
-fun main(){
+fun task8(){
+    val vowel = arrayOf('e', 'i', 'u', 'a', 'o', 'y', 'k')
+    val vowels: HashSet<Any?> = HashSet<Any?>(Arrays.asList(*vowel))
 
+    var num = 0
+
+    for (string in arrayOf("Andromeda")) for (symbol in string.lowercase(Locale.getDefault())
+        .toCharArray()) if (vowels.contains(symbol)) num++
+
+    println("Number of vowels is: " + num)
+}
+
+fun task9(){
+}
+
+
+fun main(){
         }
