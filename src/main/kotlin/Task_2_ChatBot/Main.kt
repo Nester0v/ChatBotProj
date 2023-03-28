@@ -79,15 +79,27 @@ fun task8(){
 
     var num = 0
 
-    for (string in arrayOf("Andromeda")) for (symbol in string.lowercase(Locale.getDefault())
+    for (string in arrayOf("Uncopyrightable")) for (symbol in string.lowercase(Locale.getDefault()) //Нужно вставить свое слово например - Uncopyrightable
         .toCharArray()) if (vowels.contains(symbol)) num++
 
     println("Number of vowels is: " + num)
 }
 
 fun task9(){
+
+}
+
+fun task10(){
+    println("Your multiplication table: \n")
+    for(i in 1..9){
+        for(j in 1..9){
+            print("${i * j} \t")
+        }
+        println()
+    }
 }
 
 
 fun main(){
+
         }
