@@ -70,6 +70,27 @@ fun task6(){
 }
 
 fun task7(){
+    val arr = intArrayOf(94, -37, 20, 33, -14, 43, -100,
+        61, 59, -46, 39, 28, -59,-88, 35)
+
+    arr.sort()
+    var positiveValueCount = 0
+    val negativeValueSum = arr.filter { it < 0 }.sum()
+
+    for (i in arr.indices) {
+        if (arr[i] > 0) {
+            positiveValueCount++
+        }
+    }
+
+    val result = if (!arr.isEmpty()) {
+        println("Array is not empty!!!")
+    } else {
+        null
+    }
+
+    println("\nCount of positive elements in array: " + negativeValueSum)
+    println("\nSum of negative elements in array: " + positiveValueCount)
 
 }
 
@@ -79,14 +100,29 @@ fun task8(){
 
     var num = 0
 
-    for (string in arrayOf("Uncopyrightable")) for (symbol in string.lowercase(Locale.getDefault()) //Нужно вставить свое слово например - Uncopyrightable
-        .toCharArray()) if (vowels.contains(symbol)) num++
+    for (string in arrayOf("Uncopyrightable")) // Нужно вставить свое слово например - Uncopyrightable
+        for (symbol in string.lowercase(Locale.getDefault()).toCharArray())
+            if (vowels.contains(symbol))
+                num++
 
     println("Number of vowels is: " + num)
 }
 
 fun task9(){
+    fun findMiddle(str: String): String {
+        val middleIndex = str.length / 2
+        return if (str.length % 2 == 0) {
+            str.substring(middleIndex - 1, middleIndex + 1)
+        } else {
+            str.substring(middleIndex, middleIndex + 1)
+        }
+    }
+    val sc = Scanner(`in`)
 
+    println("Write your word: ")
+
+    val word = sc.next()
+    println(findMiddle(word))
 }
 
 fun task10(){
@@ -99,7 +135,27 @@ fun task10(){
     }
 }
 
-
 fun main(){
+    println("TASK 1 \n")
+    task1()
+    println("\nTASK 2 \n")
+    task2()
+    println("\nTASK 3 \n")
+    task3()
+    println("\nTASK 4 \n")
+    task4()
+    println("\nTASK 5 \n")
+    task5()
+    println("\nTASK 6 \n")
+    task6()
+    println("\nTASK 7 \n")
+    task7()
+    println("\nTASK 8 \n")
+    task8()
+    println("\nTASK 9 \n")
+    task9()
+    println("\nTASK 10 \n")
+    task10()
+}
 
-        }
+
